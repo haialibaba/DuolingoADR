@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/btnListCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hapticFeedbackEnabled="false"
+        android:text="  Từ điển"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        android:drawableStart="@drawable/icon_book"
+        android:gravity="start|center_vertical"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:padding="10dp"
+        android:textSize="22sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:layout_weight="1"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tìm kiếm"
+            android:background="@drawable/custom_edittext_search"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:drawableEnd="@drawable/icon_search"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            >
+            <TextView
+                android:id="@+id/txtWordENG_Dictionary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="new"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                />
+
+            <ImageButton
+                android:id="@+id/imgbtnLoudSpeaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_megaphone"
+                android:contentDescription="Loud Speaker"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/txtSpelling_Dictionary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="/nju:/"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/txtWordVIE_Dictionary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mới, mới mẻ, mới lạ"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/txtWordPronoun_Dictionary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(adjective)"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bird_sizelarge"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:translationZ="5dp"
+        android:background="@color/white"
+        android:paddingVertical="10dp"
+        >
+
+        <Button
+            android:id="@+id/btnMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:drawableTop="@drawable/icon_house"
+            android:text="Trang chủ"
+            android:textAllCaps="false"
+            android:textColor="@color/textColorButton"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnListCourse_Subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/icon_education"
+            android:text="Học từ vựng"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:background="@color/white"
+            android:textColor="@color/textColorButton"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btnSearchDictionary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/icon_search"
+            android:text="Tra cứu"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:translationZ="10dp"
+            />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
