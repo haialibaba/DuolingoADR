@@ -1,0 +1,369 @@
+{
+    "User": [
+        {
+            "Email": "thienviva@gmail.com",
+            "HoTen": "Huynh Nhut Thien",
+            "ID_User": 1,
+            "SDT": "0968892926"
+        },
+        {
+            "Email": "thienviva@gmail.com",
+            "HoTen": "Huynh Nhut Thien",
+            "ID_User": 1,
+            "SDT": "0968892926"
+        }
+    ],
+    "BoCauHoi": [
+        {
+            "ID_Bo": 1,
+            "STT": 1,
+            "TenBoCauHoi": "Bộ Học Tập Số 1"
+        },
+        {
+            "ID_Bo": 2,
+            "STT": 2,
+            "TenBoCauHoi": "Bộ Học Tập Số 2"
+        },
+        {
+            "ID_Bo": 3,
+            "STT": 3,
+            "TenBoCauHoi": "Bộ Học Tập Số 3"
+        },
+        {
+            "ID_Bo": 4,
+            "STT": 4,
+            "TenBoCauHoi": "Bộ Học Tập Số 4"
+        }
+    ],
+    "SKILL": [
+        {
+            "ID_SKILL": 1,
+            "SKILL": "Điền khuyết"
+        },
+        {
+            "ID_SKILL": 2,
+            "SKILL": "Nghe"
+        },
+        {
+            "ID_SKILL": 3,
+            "SKILL": "Sắp xếp câu"
+        }
+    ],
+    "TRANGTHAI": [
+        {
+            "ID_BO": 1,
+            "ID_SKILL": 1,
+            "ID_USER": 1
+        }
+    ],
+    "TuVung": [
+        {
+            "Audio": "https://github.com/thienviva/language-learning-apps/blob/main/CSDL/TuVung/Bo01/president.mp3?raw=true",
+            "DapAn": "president",
+            "DichNghia": "Tổng thống",
+            "HinhAnh": "2",
+            "ID_Bo": 1,
+            "ID_Tu": 1,
+            "LoaiTu": "Danh từ"
+        },
+        {
+            "Audio": "https://github.com/thienviva/language-learning-apps/blob/main/CSDL/TuVung/Bo01/customer.mp3?raw=true",
+            "DapAn": "customer",
+            "DichNghia": "Khách hàng",
+            "HinhAnh": "10",
+            "ID_Bo": 1,
+            "ID_Tu": 2,
+            "LoaiTu": "Danh từ"
+        },
+        {
+            "Audio": "https://github.com/thienviva/language-learning-apps/blob/main/CSDL/TuVung/Bo01/purchase.mp3?raw=true",
+            "DapAn": "purchase",
+            "DichNghia": "Mua",
+            "HinhAnh": "11",
+            "ID_Bo": 1,
+            "ID_Tu": 3,
+            "LoaiTu": "Động từ"
+        },
+        {
+            "Audio": "https://github.com/thienviva/language-learning-apps/blob/main/CSDL/TuVung/Bo01/item.mp3?raw=true",
+            "DapAn": "item",
+            "DichNghia": "Món hàng",
+            "HinhAnh": "1",
+            "ID_Bo": 1,
+            "ID_Tu": 4,
+            "LoaiTu": "Danh từ"
+        },
+        {
+            "Audio": "https://github.com/thienviva/language-learning-apps/blob/main/CSDL/TuVung/Bo01/consultant.mp3?raw=true",
+            "DapAn": "consultant",
+            "DichNghia": "Tư vấn viên",
+            "HinhAnh": "3",
+            "ID_Bo": 1,
+            "ID_Tu": 5,
+            "LoaiTu": "Danh từ"
+        },
+        {
+            "Audio": "a",
+            "DapAn": "resign",
+            "DichNghia": "Từ chức",
+            "HinhAnh": "4",
+            "ID_Bo": 2,
+            "ID_Tu": 6,
+            "LoaiTu": "Động từ"
+        },
+        {
+            "Audio": "a",
+            "DapAn": "payroll",
+            "DichNghia": "Lương",
+            "HinhAnh": "5",
+            "ID_Bo": 2,
+            "ID_Tu": 7,
+            "LoaiTu": "Danh từ"
+        },
+        {
+            "Audio": "a",
+            "DapAn": "advise",
+            "DichNghia": "Khuyên bảo",
+            "HinhAnh": "6",
+            "ID_Bo": 3,
+            "ID_Tu": 8,
+            "LoaiTu": "Động từ"
+        },
+        {
+            "Audio": "a",
+            "DapAn": "leadership",
+            "DichNghia": "Lãnh đạo",
+            "HinhAnh": "7",
+            "ID_Bo": 3,
+            "ID_Tu": 9,
+            "LoaiTu": "Danh từ"
+        },
+        {
+            "Audio": "a",
+            "DapAn": "consider",
+            "DichNghia": "Xem xét",
+            "HinhAnh": "8",
+            "ID_Bo": 4,
+            "ID_Tu": 10,
+            "LoaiTu": "Động từ"
+        },
+        {
+            "Audio": "a",
+            "DapAn": "contract",
+            "DichNghia": "Hợp đồng",
+            "HinhAnh": "9",
+            "ID_Bo": 4,
+            "ID_Tu": 11,
+            "LoaiTu": "Danh từ"
+        }
+    ],
+    "DienKhuyet": [
+        {
+            "DapAn": "jump",
+            "GoiY": "eat run can jump",
+            "ID_Bo": 1,
+            "ID_Cau": 0,
+            "NoiDung": "The frog can___"
+        },
+        {
+            "DapAn": "can",
+            "GoiY": "eat run can jump",
+            "ID_Bo": 1,
+            "ID_Cau": 1,
+            "NoiDung": "The duck___swim"
+        },
+        {
+            "DapAn": "eat",
+            "GoiY": "eat run can jump",
+            "ID_Bo": 1,
+            "ID_Cau": 2,
+            "NoiDung": "The rabbit likes to___carrots"
+        },
+        {
+            "DapAn": "run",
+            "GoiY": "eat run can jump",
+            "ID_Bo": 1,
+            "ID_Cau": 3,
+            "NoiDung": "My dogs___fast"
+        },
+        {
+            "DapAn": "music",
+            "GoiY": "music dance",
+            "ID_Bo": 2,
+            "ID_Cau": 4,
+            "NoiDung": "Our family listen to___"
+        },
+        {
+            "DapAn": "dance",
+            "GoiY": "music dance",
+            "ID_Bo": 2,
+            "ID_Cau": 5,
+            "NoiDung": "My parent like to___"
+        },
+        {
+            "DapAn": "piano",
+            "GoiY": "piano guitar",
+            "ID_Bo": 3,
+            "ID_Cau": 7,
+            "NoiDung": "I sit at the___"
+        },
+        {
+            "DapAn": "guitar",
+            "GoiY": "piano guitar",
+            "ID_Bo": 3,
+            "ID_Cau": 8,
+            "NoiDung": "My brother plays an electric___"
+        },
+        {
+            "DapAn": "drum",
+            "GoiY": "drum, new",
+            "ID_Bo": 4,
+            "ID_Cau": 9,
+            "NoiDung": "My little brother bangs on the snare___"
+        },
+        {
+            "DapAn": "new",
+            "GoiY": "drum, new",
+            "ID_Bo": 4,
+            "ID_Cau": 10,
+            "NoiDung": "She has a ___ dress"
+        }
+    ],
+    "LuyenNghe": [
+        {
+            "Audio": "https://github.com/Lap2000/songs/raw/main/hinh01.wav",
+            "DapAn_A": "A",
+            "DapAn_B": "B",
+            "DapAn_C": "C",
+            "DapAn_D": "D",
+            "DapAn_True": "2",
+            "HinhAnh": "img1",
+            "ID_Bai": 1,
+            "ID_Bo": 1
+        },
+        {
+            "Audio": "https://github.com/Lap2000/songs/raw/main/hinh02.wav",
+            "DapAn_A": "A",
+            "DapAn_B": "B",
+            "DapAn_C": "C",
+            "DapAn_D": "D",
+            "DapAn_True": "4",
+            "HinhAnh": "img6",
+            "ID_Bai": 2,
+            "ID_Bo": 1
+        },
+        {
+            "Audio": "https://github.com/Lap2000/songs/raw/main/hinh03.wav",
+            "DapAn_A": "A",
+            "DapAn_B": "B",
+            "DapAn_C": "C",
+            "DapAn_D": "D",
+            "DapAn_True": "1",
+            "HinhAnh": "img4",
+            "ID_Bai": 3,
+            "ID_Bo": 1
+        },
+        {
+            "Audio": "https://github.com/Lap2000/songs/raw/main/hinh04.wav",
+            "DapAn_A": "A",
+            "DapAn_B": "B",
+            "DapAn_C": "C",
+            "DapAn_D": "D",
+            "DapAn_True": "4",
+            "HinhAnh": "img5",
+            "ID_Bai": 4,
+            "ID_Bo": 1
+        },
+        {
+            "Audio": "https://github.com/Lap2000/songs/raw/main/hinh05.wav",
+            "DapAn_A": "A",
+            "DapAn_B": "B",
+            "DapAn_C": "C",
+            "DapAn_D": "D",
+            "DapAn_True": "3",
+            "HinhAnh": "img3",
+            "ID_Bai": 5,
+            "ID_Bo": 1
+        },
+        {
+            "Audio": "https://github.com/Lap2000/songs/raw/main/hinh06.wav",
+            "DapAn_A": "A",
+            "DapAn_B": "B",
+            "DapAn_C": "C",
+            "DapAn_D": "D",
+            "DapAn_True": "3",
+            "HinhAnh": "img2",
+            "ID_Bai": 6,
+            "ID_Bo": 1
+        }
+    ],
+    "TracNghiem": [
+        {
+            "DapAn_A": "to",
+            "DapAn_B": "by",
+            "DapAn_C": "on",
+            "DapAn_D": "for",
+            "DapAn_True": "1",
+            "ID_Bo": 1,
+            "ID_Cau": 1,
+            "NoiDung": "They are required to inform the human resources department when resigning due .......... a disagreement over company policy."
+        },
+        {
+            "DapAn_A": "since",
+            "DapAn_B": "here",
+            "DapAn_C": "then",
+            "DapAn_D": "much",
+            "DapAn_True": "3",
+            "ID_Bo": 1,
+            "ID_Cau": 2,
+            "NoiDung": "All the important files were organized first by color and .......... alphabetized by the title and name."
+        }
+    ],
+    "SapXepCau": [
+        {
+            "DapAn": "They are required to inform the human resources department when resigning due to a disagreement over company policy.",
+            "IDBo": 1,
+            "IDCau": 1,
+            "Part1": "They are required to inform",
+            "Part2": "the human resources department",
+            "Part3": "when resigning due to",
+            "Part4": "a disagreement over company policy."
+        },
+        {
+            "DapAn": "All the important files were organized first by color and then alphabetized by the title and name.",
+            "IDBo": 1,
+            "IDCau": 2,
+            "Part1": "All the important files",
+            "Part2": "were organized first",
+            "Part3": "by color and then alphabetized",
+            "Part4": "by the title and name."
+        },
+        {
+            "DapAn": "Many companies interviewed plan to hire more personnel, while 20 percent expect to reduce their payrolls.",
+            "IDBo": 1,
+            "IDCau": 3,
+            "Part1": "Many companies interviewed",
+            "Part2": "plan to hire more personnel,",
+            "Part3": "while 20 percent expect",
+            "Part4": "to reduce their payrolls."
+        },
+        {
+            "DapAn": "Employees who wish to enroll in the marketing seminar are urged to do so by this Friday.",
+            "IDBo": 1,
+            "IDCau": 4,
+            "Part1": "Employees",
+            "Part2": "who wish to enroll in",
+            "Part3": "the marketing seminar",
+            "Part4": "are urged to do so by this Friday."
+        },
+        {
+            "DapAn": "The secretary in the 2nd flood office answers e-mails between 8 a.m. and noon.",
+            "IDBo": 1,
+            "IDCau": 5,
+            "Part1": "The secretary",
+            "Part2": "in the 2nd flood office",
+            "Part3": "answers e-mails",
+            "Part4": "between 8 a.m. and noon."
+        }
+    ]
+}
