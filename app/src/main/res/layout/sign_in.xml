@@ -113,25 +113,25 @@
         />
 
     <Button
-        android:id="@+id/btnSignUpWithGoogle"
+        android:id="@+id/btnSignInWithGoogle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
         android:background="@drawable/custom_radius_white"
-        android:hapticFeedbackEnabled="false"
-        android:text="     SIGN UP WITH GOOGLE"
-        android:elevation="8dp"
-        android:stateListAnimator="@null"
+        android:cursorVisible="true"
         android:drawableStart="@drawable/icon_google"
+        android:elevation="8dp"
         android:gravity="start|center_vertical"
+        android:hapticFeedbackEnabled="false"
         android:paddingHorizontal="85dp"
         android:paddingVertical="15dp"
-        android:layout_marginTop="150dp"
-        android:textFontWeight="600"
-        android:layout_gravity="center"
-        android:cursorVisible="true"/>
+        android:stateListAnimator="@null"
+        android:text="     SIGN IN WITH GOOGLE"
+        android:textFontWeight="600" />
 
     <Button
-        android:id="@+id/btnSignUpWithFacebook"
+        android:id="@+id/btnSignInWithFacebook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_radius_white"
@@ -142,7 +142,7 @@
         android:paddingHorizontal="80dp"
         android:paddingVertical="15dp"
         android:stateListAnimator="@null"
-        android:text="     SIGN UP WITH FACEBOOK"
+        android:text="     SIGN IN WITH FACEBOOK"
         android:layout_marginTop="10dp"
         android:textFontWeight="600"
         android:layout_gravity="center"

@@ -32,14 +32,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Đăng ký tài khoản"
-        android:textSize="22sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
-        />
-
+        android:layout_marginTop="60dp"
+        android:text="Đăng ký tài khoản"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,6 +81,7 @@
             android:textSize="16sp"
             />
 
+
         <EditText
             android:id="@+id/edPhoneNumber"
             android:layout_width="match_parent"
@@ -98,9 +97,7 @@
             android:paddingLeft="10dp"
             android:textColor="@color/black"
             android:textColorHint="@color/textColorHint"
-            android:textSize="16sp"
-            />
-
+            android:textSize="16sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -174,69 +171,30 @@
                 />
         </RelativeLayout>
 
+
         <Button
             android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:textSize="16sp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/custom_button_getstarted"
             android:backgroundTint="#E6E4EA"
+            android:cursorVisible="true"
+            android:padding="10dp"
+            android:text="Sign Up"
             android:textColor="#BAB4B4"
-            android:cursorVisible="true"
-            />
-
-
-        <Button
-            android:id="@+id/btnSignUpWithGoogle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/custom_radius_white"
-            android:drawableStart="@drawable/icon_google"
-            android:elevation="8dp"
-            android:gravity="start|center_vertical"
-            android:hapticFeedbackEnabled="false"
-            android:paddingHorizontal="70dp"
-            android:paddingVertical="15dp"
-            android:stateListAnimator="@null"
-            android:text="     SIGN UP WITH GOOGLE"
-            android:textFontWeight="600"
-            android:cursorVisible="true"
-            />
-
-        <Button
-            android:id="@+id/btnSignUpWithFacebook"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/custom_radius_white"
-            android:drawableStart="@drawable/icon_facebook"
-            android:elevation="8dp"
-            android:gravity="start|center_vertical"
-            android:hapticFeedbackEnabled="false"
-            android:paddingHorizontal="65dp"
-            android:paddingVertical="15dp"
-            android:stateListAnimator="@null"
-            android:text="     SIGN UP WITH FACEBOOK"
-            android:layout_marginTop="10dp"
-            android:textFontWeight="600"
-            android:layout_gravity="center"
-            android:cursorVisible="true"
-            />
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
             android:text="By signing in to Lingo Simple, you agree to our"
             android:textAlignment="center"
-            android:textSize="16sp"
-            android:layout_marginTop="50dp"/>
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView5"
