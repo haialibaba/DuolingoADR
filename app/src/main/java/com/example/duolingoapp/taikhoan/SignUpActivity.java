@@ -7,13 +7,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.duolingoapp.R;
+import com.example.duolingoapp.premium.PremiumDB;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -45,6 +50,7 @@ public class SignUpActivity extends AppCompatActivity {
     FirebaseDatabase rootNode;
     DatabaseReference reference;
     DatabaseAccess DB;
+    PremiumDB premiumDB;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -67,6 +73,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         DB =  DatabaseAccess.getInstance(getApplicationContext());
+        premiumDB = PremiumDB.getInstance(getApplicationContext());
 
 
         backSinUp.setOnClickListener(new View.OnClickListener() {
@@ -84,67 +91,76 @@ public class SignUpActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String hoten = edName.getText().toString().trim();
-                String email = edEmail.getText().toString().trim();
-                String sdt = edSDT.getText().toString().trim();
-                String matkhau = edPassword.getText().toString().trim();
-                String xacnhanmatkhau = edRePassword.getText().toString().trim();
+                Log.d("isInternetConnected signup", String.valueOf(isNetworkConnected(SignUpActivity.this)));
+                if (isNetworkConnected(SignUpActivity.this)){
+                    String hoten = edName.getText().toString().trim();
+                    String email = edEmail.getText().toString().trim();
+                    String sdt = edSDT.getText().toString().trim();
+                    String matkhau = edPassword.getText().toString().trim();
+                    String xacnhanmatkhau = edRePassword.getText().toString().trim();
 
-                if(hoten.equals("")||email.equals("")||sdt.equals("")||matkhau.equals(""))
-                {
-                    Toast.makeText(SignUpActivity.this, "Điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    if(matkhau.equals(xacnhanmatkhau)){
-
-                        Boolean kiemtrataikhoan = DB.checktaikhoan(email);
-                        if(kiemtrataikhoan == false)
-                        {
-
-
-                            mAuth.createUserWithEmailAndPassword(email, matkhau)
-                                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-
-                                        @Override
-                                        public void onComplete(@NonNull Task<AuthResult> task)
-                                        {
-                                            if (task.isSuccessful()) {
-                                                DB.open();
-                                                Boolean insert = DB.insertData(mAuth.getCurrentUser().getUid(),hoten,email,sdt,0, matkhau);
-                                                DB.close();
-                                                btnSignUp.setText(insert.toString());
-                                                Toast.makeText(SignUpActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
-
-                                                // if the user created intent to login activity
-                                                rootNode= FirebaseDatabase.getInstance();
-                                                reference= rootNode.getReference("User");
-                                                User newuser = new User(mAuth.getCurrentUser().getUid(), hoten,0,email, matkhau, sdt);
-                                                reference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(newuser);
-
-                                                Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
-                                                intent.putExtra("hideLaunchScreen", true);
-                                                startActivity(intent);
-                                                // Kết thúc Activity hiện tại
-                                                finish();
-                                            }
-                                            else {
-
-                                                Toast.makeText(SignUpActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
-                                            }
-                                        }
-                                    });
-                        }
-                        else{
-                            Toast.makeText(SignUpActivity.this, "tên tài khoản đã tồn tại", Toast.LENGTH_SHORT).show();
-                        }
-
-
+                    if(hoten.equals("")||email.equals("")||sdt.equals("")||matkhau.equals(""))
+                    {
+                        Toast.makeText(SignUpActivity.this, "Điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                     }
                     else{
-                        Toast.makeText(SignUpActivity.this, "Mật khẩu không khớp", Toast.LENGTH_SHORT).show();
-                        edPassword.setText("");
-                        edRePassword.setText("");
+                        if(matkhau.equals(xacnhanmatkhau)){
+
+                            Boolean kiemtrataikhoan = DB.checktaikhoan(email);
+                            if(kiemtrataikhoan == false)
+                            {
+
+
+                                mAuth.createUserWithEmailAndPassword(email, matkhau)
+                                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+                                            @Override
+                                            public void onComplete(@NonNull Task<AuthResult> task)
+                                            {
+                                                if (task.isSuccessful()) {
+                                                    DB.open();
+                                                    Boolean insert = DB.insertData(mAuth.getCurrentUser().getUid(),hoten,email,sdt,matkhau);
+                                                    DB.close();
+                                                    btnSignUp.setText(insert.toString());
+                                                    Toast.makeText(SignUpActivity.this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+
+                                                    // if the user created intent to login activity
+                                                    rootNode= FirebaseDatabase.getInstance();
+                                                    reference= rootNode.getReference("User");
+                                                    User newuser = new User(mAuth.getCurrentUser().getUid(), hoten, email, matkhau, sdt);
+                                                    reference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(newuser);
+
+                                                    premiumDB.addPremium(mAuth.getCurrentUser().getUid(), 1);
+                                                    premiumDB.addPremium(mAuth.getCurrentUser().getUid(), 2);
+                                                    premiumDB.addPremium(mAuth.getCurrentUser().getUid(), 3);
+
+                                                    Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                                                    intent.putExtra("hideLaunchScreen", true);
+                                                    startActivity(intent);
+                                                    // Kết thúc Activity hiện tại
+                                                    finish();
+                                                }
+                                                else {
+
+                                                    Toast.makeText(SignUpActivity.this, "Đăng ký thất bại", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }
+                                        });
+                            }
+                            else{
+                                Toast.makeText(SignUpActivity.this, "tên tài khoản đã tồn tại", Toast.LENGTH_SHORT).show();
+                            }
+
+
+                        }
+                        else{
+                            Toast.makeText(SignUpActivity.this, "Mật khẩu không khớp", Toast.LENGTH_SHORT).show();
+                            edPassword.setText("");
+                            edRePassword.setText("");
+                        }
                     }
+                } else {
+                    Toast.makeText(SignUpActivity.this, "Vui lòng kết nối mạng", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -188,6 +204,15 @@ public class SignUpActivity extends AppCompatActivity {
         });
     }
 
+    public static boolean isNetworkConnected(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (cm != null) {
+            NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+            return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+        }
+        return false;
+    }
+
     private void changeBtnColor() {
         // Khai báo một TextWatcher để theo dõi sự thay đổi trên các EditText
         TextWatcher textWatcher = new TextWatcher() {
@@ -211,6 +236,9 @@ public class SignUpActivity extends AppCompatActivity {
                     int rectangle6Color = ContextCompat.getColor(SignUpActivity.this, R.color.rectangle_6_color);
                     btnSignUp.setBackgroundTintList(ColorStateList.valueOf(rectangle6Color));
                     btnSignUp.setTextColor(Color.WHITE);
+                }else{
+                    btnSignUp.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#E6E4EA")));
+                    btnSignUp.setTextColor(Color.parseColor("#BAB4B4"));
                 }
             }
 
