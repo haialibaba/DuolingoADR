@@ -25,27 +25,27 @@
         app:srcCompat="@drawable/bird_sizelarge" />
 
     <TextView
-        android:id="@+id/edTextHoTenNav"
+        android:id="@+id/txtName_nav"
         android:layout_width="201dp"
         android:layout_height="47dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:paddingTop="8dp"
-        android:layout_marginTop="5dp"
-        android:textSize="20dp"
-        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:paddingTop="15dp"
         android:text="@string/lingo_simple_string"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/editTextEmailNav"
-        android:layout_width="132dp"
+        android:id="@+id/txtEmail_nav"
+        android:layout_width="150dp"
         android:layout_height="57dp"
         android:layout_marginStart="10dp"
+        android:textSize="14dp"
         android:text="@string/app_description"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/edTextHoTenNav" />
+        app:layout_constraintTop_toBottomOf="@+id/txtName_nav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
