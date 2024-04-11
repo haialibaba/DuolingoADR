@@ -2,13 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <group android:checkableBehavior="single">
-    <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/ic_main"
-        android:title="Home" />
-    <item
-        android:icon="@drawable/ic_setting"
-        android:title="Cài đặt"></item>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_main"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_setting"
+            android:title="Nhắc nhở học tập" />
     </group>
 
     <item android:title="Học tập">
@@ -30,7 +32,7 @@
                 <item android:title="Sắp xếp câu"
                     android:id="@+id/SapXepCau"
                     android:icon="@drawable/ic_order"></item>
-                <item android:title="Nghe"
+                <item android:title="Luyện Nghe"
                     android:id="@+id/LuyenNghe"
                     android:icon="@drawable/ic_hearing"></item>
                 <item android:title="Điền khuyết"
@@ -46,9 +48,6 @@
                     android:icon="@drawable/ic_person"
                     android:id="@+id/ThongTinTaiKhoan"
                     ></item>
-                <item android:title="Đăng xuất"
-                    android:icon="@drawable/ic_logout"
-                    android:id="@+id/logout"></item>
             </group>
         </menu>
     </item>
