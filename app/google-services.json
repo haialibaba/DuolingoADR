@@ -13,7 +13,20 @@
           "package_name": "com.example.duolingoapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1089218875346-bvcich84m2l5qq0v27plqhf071itrebh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.duolingoapp",
+            "certificate_hash": "56adb5bba32c78893d85a92a10df1be45f3c3cd8"
+          }
+        },
+        {
+          "client_id": "1089218875346-lbrsumok9ld70srai0hj5g3snrgc4pri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAPD1DM041785ZnBo3GMaxAxFmJDrb8c2s"
@@ -21,26 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:1089218875346:android:e654368a79f5c3858a020b",
-        "android_client_info": {
-          "package_name": "com.example.projectse"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAPD1DM041785ZnBo3GMaxAxFmJDrb8c2s"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089218875346-lbrsumok9ld70srai0hj5g3snrgc4pri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

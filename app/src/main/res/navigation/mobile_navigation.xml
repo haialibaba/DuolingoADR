@@ -12,38 +12,31 @@
         tools:layout="@layout/fragment_home" />
 
     <activity
-        android:id="@+id/HocTuVung"
+        android:id="@+id/setting"
+        android:label="Cài đặt"
+        android:name="com.example.duolingoapp.taikhoan.SettingActivity"
+        tools:layout="@layout/setting"
+        />
+
+    <activity
+        android:id="@+id/notification"
+        android:label="Nhắc nhở học tập"
+        android:name="com.example.duolingoapp.thongbao.NotificationActivity"
+        tools:layout="@layout/activity_notification"
+        />
+
+    <activity
+        android:id="@+id/Tudien"
         android:label="Học từ vựng"
-        android:name="com.example.duolingoapp.bocauhoi.QuestionListActivity"
-        tools:layout="@layout/list_subject"
+        android:name="com.example.duolingoapp.tudien.DictionaryActivity"
+        tools:layout="@layout/dictionary"
         />
 
     <activity
-        android:id="@+id/TracNghiem"
-        android:label="Trắc nghiệm"
-        android:name="com.example.duolingoapp.bocauhoi.QuestionListActivity"
-        tools:layout="@layout/list_subject"
-        />
-
-    <activity
-        android:id="@+id/DienKhuyet"
-        android:label="Điền khuyết"
-        android:name="com.example.duolingoapp.bocauhoi.QuestionListActivity"
-        tools:layout="@layout/list_subject"
-        />
-
-    <activity
-        android:id="@+id/LuyenNghe"
-        android:label="Luyện nghe"
-        android:name="com.example.duolingoapp.bocauhoi.QuestionListActivity"
-        tools:layout="@layout/list_subject"
-        />
-
-    <activity
-        android:id="@+id/SapXepCau"
-        android:label="Sắp xếp câu"
-        android:name="com.example.duolingoapp.bocauhoi.QuestionListActivity"
-        tools:layout="@layout/list_subject"
+        android:id="@+id/QuetDichAnh"
+        android:label="Quét-dịch ảnh"
+        android:name="com.example.duolingoapp.tudien.Recognize_text"
+        tools:layout="@layout/activity_recognize_text"
         />
 
     <activity
@@ -52,14 +45,5 @@
         android:name="com.example.duolingoapp.taikhoan.ProfileActivity"
         tools:layout="@layout/profile"
         />
-    <activity
-        android:id="@+id/logout"
-        android:label="Đăng xuất"
-        android:name="com.example.duolingoapp.taikhoan.LoginActivity"
-        tools:layout="@layout/sign_in"
-        />
-
-
-
 
 </navigation>

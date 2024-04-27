@@ -26,4 +26,11 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="default_web_client_id">1089218875346-lbrsumok9ld70srai0hj5g3snrgc4pri.apps.googleusercontent.com</string>
+
+    <string name="facebook_app_id">297560363359483</string>
+    <string name="fb_login_protocol_scheme">fb297560363359483</string>
+    <string name="facebook_client_token">EAAEOoSvB3PsBO62mvv9sFsOJ2ZCSlqttTl75tCZB6NXRVzeRI8XePSWyjH0SDOrHs1A5ZCOKTPWQopC6Bm37DTbYwZAnP9SZBAEFWtGvPfuAj5sfvs99kwN5k6oTAzkWsCfYLerQ5HnCHNaDwXU5tH83xFzZCE5bBS5DdJpATaKdHtwpOsetVKUZBRBnLETZApskfqMdpIh7IJblRDR1kOYE7dfgUZAagn0ZCrAJJRfYzSgiw1TzZCEZAB5YBCTOf26I5O4ZD</string>
+
 </resources>

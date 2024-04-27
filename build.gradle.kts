@@ -1,4 +1,10 @@
 buildscript {
+    repositories {
+        // Thêm dòng sau vào để tải SDK từ Maven Central
+        mavenCentral()
+        google()
+        jcenter()
+    }
     dependencies {
         classpath("com.google.gms:google-services:4.4.1")
     }

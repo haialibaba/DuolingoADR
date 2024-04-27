@@ -26,4 +26,8 @@
     <color name="textColorHint">#B1B0B0</color>
     <color name="textColorButton">#8f8f8b</color>
     <color name="colorButtonBlue">#6740F6</color>
+
+    <color name="grey">#898989</color>
+    <color name="my_primary">#EF6C00</color>
+
 </resources>
